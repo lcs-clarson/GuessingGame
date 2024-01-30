@@ -1,17 +1,3 @@
-//
-//  GameView.swift
-//  GuessingGame
-//
-//  Created by Charlie Larson on 2024-01-30.
-//
-
-//
-//  GameView.swift
-//  GuessingGame
-//
-//  Created by Russell Gordon on 2024-01-29.
-//
-
 import SwiftUI
 
 struct GameView: View {
@@ -110,14 +96,10 @@ struct GameView: View {
         
         // Save the user's guesses
         guessesMade.append(selectedNumber)
-        
-    }
-        
     }
     
     // Start a new game
     func reset() {
-        
         // Start the user back at 50
         selectedNumber = 50
         
@@ -129,12 +111,13 @@ struct GameView: View {
         
         // Remove guesses made
         guessesMade.removeAll()
-        
     }
-    
 }
 
-#Preview {
-    GameView()
-        .frame(width: 500, height: 600)
+struct GameView_Previews: PreviewProvider {
+    static var previews: some View {
+        GameView()
+            .frame(width: 500, height: 600)
+    }
 }
+
